@@ -1,0 +1,16 @@
+# This docker compose configuration is used for local development of the app. swarm.yml is the production configuration for the deployment of containers. 
+version: '3.8'
+
+services:
+  api:
+    image: 192.168.4.141:5000/metal-whisperermetal-whisperer:latest
+    ports:
+      - "8080:8080"
+    build: .
+    deploy:
+      resources:
+        reservations:
+          generic_resources:
+            - discrete_resource_spec:
+                kind: "NVIDIA-GPU"
+                value: 1
