@@ -3,7 +3,7 @@ version: '3.8'
 
 services:
   api:
-    image: 192.168.4.141:5000/metal-whisperermetal-whisperer:latest
+    image: metal-whisperer:latest
     ports:
       - "8080:8080"
     build: .
