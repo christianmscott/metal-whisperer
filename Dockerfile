@@ -1,4 +1,4 @@
-FROM nvidia/cuda:12.0.0-runtime-ubuntu22.04
+FROM nvidia/cuda:12.0.0-base-ubuntu22.04
 RUN mkdir /app
 WORKDIR /app
 COPY src /app/
